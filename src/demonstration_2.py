@@ -12,6 +12,12 @@ Examples:
 number([]) # => []
 number(["a", "b", "c"]) # => ["1: a", "2: b", "3: c"]
 """
+# use enumerate or run some for loop that keeps track of both the element and index
+
+
 def number(lines):
     # Your code here
-
+    list = []
+    for i, x in enumerate(lines):
+        list.append(str(i + 1) + ":" + str(x))
+    return list
